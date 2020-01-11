@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Don't forget to read this.</title>
+</head>
+<body>
+
+<form action="/update" method="put">
+    <div>
+        <h2>Edit Project Details</h2>
+
+    </div>
+
+
+    <pre>
+
+<label>ID</label>              <input type="text" name="ID" value="{{ .ID}}" readonly="readonly"><br/>
+<label>Project Name</label>        <input type="text" name="Name"><br/>
+<label>Project Description</label> <input type = "text" name=" Description"><br/>
+<label>Project URL</label>         <input type = "text" name="URL"><br/>
+    </pre>
+
+    <button type="submit">Save</button>
+</form>
+
+
+
+</body>
+</html>
