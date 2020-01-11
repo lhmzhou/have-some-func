@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"log"
+	"net/http"
 	"os"
 )
 
@@ -59,4 +60,5 @@ func main() {
 
 	*/
 
+	http.HandleFunc("/index", index)
 }
