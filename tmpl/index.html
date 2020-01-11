@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage your project here.</title>
+</head>
+<body>
+
+<a href="#" onclick="document.getElementById('create-form').style.display='block'">
+</a>
+
+<h2> Current Projects </h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>ID</td>
+        <td>Project Name</td>
+        <td>Project Description</td>
+        <td>Project URL</td>
+        <td>Other Actions</td>
+      </tr>
+       </thead>
+       <tbody>
+    
+      <tr>
+        <td>123</td>
+        <td> ABC </td>
+        <td>asdfghjkl; </td> 
+        <td>www.go.com</a></td>
+        <td><a href="/edit?id={{ .Id }}">Edit</a>
+        <br><a href="/delete?id={{ .Id }}">Delete</a><td></td>
+      </tr>
+
+       </tbody>
+    </table>
+
+</br>
+<button>
+
+    <a href="createNew">Add New Project</a>
+
+</button>
+
+<form action="/editPage" method="put" style="display: none">
+    <input type="hidden" name="ID" id="IDToUpdate">
+    <button id="modify_button" type="submit"></button>
+</form>
+
+
+
+    <div id="delete-form" hidden>
+            <div>
+                <span
+                        onclick="document.getElementById('delete-form').style.display='none'">&times;</span>
+                <h2>Confirm?</h2>
+
+            </div>
+
+            <form action="/delete" method="POST" hidden>
+                <input type="hidden" name="ID" id="IDToDelete">
+                <div>
+                    <button type="submit" id="delete_button">Delete</button>
+                    <button type="button"
+                            onclick="document.getElementById('delete-form').style.display='none'">Cancel
+                    </button>
+                </div>
+            </form>
+
+    </div>
+
+
+<script>
+
+    function updateProject(e) {
+        var ID = e.parentNode.parentNode.childNodes[3].innerText;
+        document.getElementById('IDToUpdate').value = ID;
+        document.getElementById('modify_button').click();
+    }
+
+
+    function deleteProject(e) {
+        //var deleteForm = document.getElementById('delete-form');
+        //deleteForm.style.display = 'block';
+        var ID = e.parentNode.parentNode.childNodes[3].innerText;
+        document.getElementById('IDToDelete').value = ID;
+        document.getElementById('delete_button').click();
+    }
+
+</script>
+
+
+
+</body>
+</html>
