@@ -12,7 +12,7 @@ var (
 	err error
 )
 
-type Data struct {
+type Project struct {
 	ID          int64  `json:"id"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
@@ -61,4 +61,11 @@ func main() {
 	*/
 
 	http.HandleFunc("/index", index)
+	http.HandleFunc("/create", create)
+	http.HandleFunc("/createNew", createNewProject)
+	http.HandleFunc("/update", update)
+	http.HandleFunc("/delete", delete)
+	http.HandleFunc("/edit", edit)
+
+	http.ListenAndServe(":"+port, nil)
 }
