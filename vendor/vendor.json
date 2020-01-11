@@ -1,0 +1,16 @@
+{
+	"comment": "",
+	"ignore": "test tools",
+	"package": [
+		{
+			"checksumSHA1": "t8sxwHzlQMuv8HU0L091X2+trQJQ=",
+			"origin": "https://github.com/mattn/go-sqlite3",
+			"path": "https://github.com/mattn/go-sqlite3/blob/master/sqlite3.go",
+			"revision": "af261efd31b6c641d91d5c53cc4f9bc1e438f4e5a",
+            "revisionTime": "2020-01-10T06:07:01Z",
+            "version": "v3.0.0",
+			"versionExact": "v3.0.0"
+		}
+	],
+	"rootPath": "github.com/lhmzhou/have-some-funct"
+}
